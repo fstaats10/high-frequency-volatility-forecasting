@@ -222,24 +222,18 @@
                 </table>
             </div>
 
-            <!-- Plot Placeholder (Stylized Terminal output feel) -->
+            <!-- Plot Container -->
             <div class="bg-slate-850 border border-slate-800 rounded-lg p-6 shadow-lg">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-sm font-mono text-slate-400 uppercase tracking-wider">Figure 11: Actual vs NN OHLC vs NN + Features vs GARCH Forecasts </h3>
+                    <h3 class="text-sm font-mono text-slate-400 uppercase tracking-wider">Actual vs NN OHLC vs NN + Features vs GARCH Forecasts</h3>
                     <div class="flex gap-2">
                         <span class="w-3 h-3 rounded-full bg-slate-600"></span>
                         <span class="w-3 h-3 rounded-full bg-quant-cyan"></span>
                         <span class="w-3 h-3 rounded-full bg-quant-emerald"></span>
                     </div>
                 </div>
-                <div class="w-full h-80 bg-slate-900 border border-slate-700 rounded flex flex-col items-center justify-center text-slate-500 relative overflow-hidden">
-                    <!-- Faux grid lines -->
-                    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-50"></div>
-                    <i class="fas fa-chart-line text-5xl mb-4 opacity-50 relative z-10 text-quant-cyan"></i>
-                    <p class="font-mono text-sm relative z-10 text-center px-4">
-                        [Visualization of Out-of-Sample Volatility Forecasts]<br>
-                        <span class="text-xs text-slate-600">Plot indicates models capture clustering, but NN forecasts follow short-term changes more closely than GARCH .</span>
-                    </p>
+                <div class="w-full bg-slate-900 border border-slate-700 rounded overflow-hidden">
+                    <img src="forecast.png" alt="Actual vs NN OHLC vs NN + Features vs GARCH Forecasts" class="w-full h-auto object-contain">
                 </div>
             </div>
 
@@ -259,7 +253,7 @@
                     <div class="text-quant-cyan mb-4"><i class="fas fa-balance-scale text-2xl"></i></div>
                     <h3 class="text-lg font-bold text-white mb-2">Statistical Significance</h3>
                     <p class="text-sm text-slate-400">
-                        The Diebold-Mariano test confirms a statistically significant improvement of the Augmented NN over GARCH (p < 0.001) . Adding option data gives a modest but significant gain .
+                        The Diebold-Mariano test confirms a statistically significant improvement of the Augmented NN over GARCH (p < 0.001). Adding option data gives a modest but significant gain.
                     </p>
                 </div>
 
@@ -268,7 +262,7 @@
                     <div class="text-quant-emerald mb-4"><i class="fas fa-shield-alt text-2xl"></i></div>
                     <h3 class="text-lg font-bold text-white mb-2">GARCH Stability</h3>
                     <p class="text-sm text-slate-400">
-                        While the NN performs best overall, robustness testing reveals GARCH is more stable across alternative samples and high/low volatility regimes .
+                        While the NN performs best overall, robustness testing reveals GARCH is more stable across alternative samples and high/low volatility regimes.
                     </p>
                 </div>
 
@@ -277,7 +271,7 @@
                     <div class="text-red-400 mb-4"><i class="fas fa-exclamation-triangle text-2xl"></i></div>
                     <h3 class="text-lg font-bold text-white mb-2">Tail-Event Sensitivity</h3>
                     <p class="text-sm text-slate-400">
-                        Neural Networks are more sensitive to extreme tail events. Tests applied include Tariff spike filtering, Winsorization, and High/Low volatility regimes . Also, GARCH-X showed risk of in-sample overfitting .
+                        Neural Networks are more sensitive to extreme tail events. Tests applied include Tariff spike filtering, Winsorization, and High/Low volatility regimes. Also, GARCH-X showed risk of in-sample overfitting.
                     </p>
                 </div>
 
@@ -324,7 +318,7 @@
                 <div class="space-y-6">
                     <div>
                         <h4 class="text-xl font-bold text-white">Pipeline Summary</h4>
-                        <p class="text-slate-400 mt-2">The project encompasses a complete quantitative pipeline: generating clean data from chaotic high-frequency streams, training models (both classical and deep learning), and running a rigorous robustness suite to validate findings .</p>
+                        <p class="text-slate-400 mt-2">The project encompasses a complete quantitative pipeline: generating clean data from chaotic high-frequency streams, training models (both classical and deep learning), and running a rigorous robustness suite to validate findings.</p>
                     </div>
                     <a href="https://github.com/fstaats10/high-frequency-volatility-forecasting" class="inline-flex justify-center items-center px-6 py-3 border border-slate-600 rounded-md shadow-sm text-base font-medium text-white bg-slate-800 hover:bg-slate-700 transition-colors">
                         <i class="fab fa-github mr-2"></i> View Repository / Source Code
