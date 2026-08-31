@@ -1,14 +1,32 @@
-# Jupyter Notebook Checkpoints
+# Jupyter / editor
 .ipynb_checkpoints/
+**/.ipynb_checkpoints/
+.vscode/
+.DS_Store
 
-# Python Cache & Virtual Environments
+# Python cache and virtual environments
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
 .venv/
 env/
 venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# Data/Secrets (if applicable)
-*.csv
-*.json
+# Model and generated output
+*.h5
+*.keras
+*.npz
+*.pkl
+kt_tuning/
+HP_search_5min_+options/
+
+# Local secrets / environment
 .env
+.env.*
+
+# Data files kept locally unless intentionally added
+# NOTE: Parquet files under Data/ are intentionally tracked because the project uses them.
